@@ -1,4 +1,4 @@
-package basic
+package com.robin.basic
 
 object Demo1 {
   def main(args: Array[String]): Unit = {

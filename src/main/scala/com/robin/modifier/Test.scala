@@ -91,23 +91,23 @@ class Outer2 {
   *
   */
 
-package bobsrocckets{
-  package navigation{
-    private[bobsrockets] class Navigator{
-      protected[navigation] def useStarChart(){}
-      class LegOfJourney{
-        private[Navigator] val distance = 100
-      }
-      private[this] var speed = 200
-    }
-  }
-  package launch{
-    import navigation._
-    object Vehicle{
-      private[launch] val guide = new Navigator
-    }
-  }
-}
+//package bobsrocckets{
+//  package navigation{
+//    private[bobsrockets] class Navigator{
+//      protected[navigation] def useStarChart(){}
+//      class LegOfJourney{
+//        private[Navigator] val distance = 100
+//      }
+//      private[this] var speed = 200
+//    }
+//  }
+//  package launch{
+//    import navigation._
+//    object Vehicle{
+//      private[launch] val guide = new Navigator
+//    }
+//  }
+//}
 
 /**
   * 上述例子中，类Navigator被标记为private[bobsrockets]就是说这个类对包含在bobsrockets包里的所有的类和对象可见。

@@ -40,23 +40,35 @@ object OptionTest {
         case None => "?"
       }
 
-      def test4():Unit = {
-
-      }
-
 
     }
 
+    def test4():Unit = {
+      /**
+        * 你可以使用 getOrElse() 方法来获取元组中存在的元素或者使用其默认的值
+        */
+      val a:Option[Int] = Some(5)
+      val b:Option[Int] = None
 
+      println("a.getOrElse(0): "+ a.getOrElse(0))
+      println("b.getOrElse(10):" + b.getOrElse(10))
+    }
 
+    def test5():Unit = {
+      val a:Option[Int] = Some(5)
+      val b:Option[Int] = None
 
+      println("a.isEmpty: "+ a.isEmpty)
+      println("b.isEmpty: "+ b.isEmpty)
 
-
-
+    }
 
 //    test1()
 //    test2()
-    test3()
+//    test3()
+//    test4()
+//    test5()
+
   }
 
 }

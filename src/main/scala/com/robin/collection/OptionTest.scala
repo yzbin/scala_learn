@@ -26,13 +26,22 @@ object OptionTest {
     }
 
     def test3():Unit={
+      /**
+        * 可以通过模式匹配来输出匹配值。实例如下
+        */
       val sites = Map("runnob" -> "www.runnob.com", "google" -> "www.google.com")
 
 
+      println("show(sites.get(\"runnob\")):" + show(sites.get("runnob")))
+      println("show(sites.get( \"baidu\")):" + show(sites.get( "baidu")) )
 
       def show(x: Option[String]) = x match {
         case Some(s) => s
         case None => "?"
+      }
+
+      def test4():Unit = {
+
       }
 
 
@@ -47,6 +56,7 @@ object OptionTest {
 
 //    test1()
 //    test2()
+    test3()
   }
 
 }

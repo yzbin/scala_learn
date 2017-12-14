@@ -14,7 +14,7 @@ object ListTest {
       val nums = Nil
 
       println("第一个网站是 : " + site.head)
-      println("最后一个网站是 : " + site.tail )
+      println("除第一网站外的其他网站是 : " + site.tail )
       println("查看列表site 是否为空 : " + site.isEmpty)
       println("查看 nums 是否为空 : " + nums.isEmpty)
     }

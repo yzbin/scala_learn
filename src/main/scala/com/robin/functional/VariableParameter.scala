@@ -5,7 +5,7 @@ package com.robin.functional
   * Description: 
   * User: bin
   * Date: 2017-12-13
-  * description:
+  *
   */
 object VariableParameter {
   def main(args: Array[String]): Unit = {

@@ -1,4 +1,4 @@
-package com.robin.`trait`
+package com.robin.traittest
 
 /**
   * Created with IntelliJ IDEA.
@@ -16,7 +16,9 @@ class Point(xc: Int, yc : Int) extends Equal{
   var x : Int = xc
   var y : Int = yc
   override def isEqual(obj: Any) =
-    obj.isInstanceOf[Point] && obj.asInstanceOf[Point].x == x
+      obj.isInstanceOf[Point]&&
+      obj.asInstanceOf[Point].x == x &&
+      obj.asInstanceOf[Point].y == y
 
 }
 object Test {

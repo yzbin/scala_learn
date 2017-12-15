@@ -10,8 +10,36 @@ object Test {
     }
 
 
+    def test2():Unit={
+      val loc = new Location(10, 20, 15)
+
+      // 移到一个新的位置
+      loc.move(10, 10, 5)
+    }
+
+
+    def test3():Unit={
+      val fred = new Employee
+      fred.name = "Fred"
+      fred.salary = 50000
+      println(fred)
+    }
+
+    def test4():Unit={
+      val point = new Point(10, 20)
+      printPoint
+
+      def printPoint: Unit ={
+        println("x 的 坐标点 :" + point.x)
+        println("y 的 坐标点 :" + point.y)
+      }
+    }
 
 //    test1()
+//    test2()
+//    test3()
+//    test4()
+
 
   }
 
@@ -29,8 +57,38 @@ class Point(xc:Int, yc :Int){
     println("y 的 坐标点 : "+ y)
   }
 
+}
+
+class Location( val  xc:Int,val yc:Int,zc :Int) extends Point(xc:Int, yc:Int){
+
+  var z: Int = zc
+
+  def move(dx: Int, dy: Int, dz: Int) {
+    x = x + dx
+    y = y + dy
+    z = z + dz
+    println ("x 的坐标点 : " + x)
+    println ("y 的坐标点 : " + y)
+    println ("z 的坐标点 : " + z)
+  }
+}
+
+
+class Person{
+  /**
+    * Scala重写一个非抽象方法，必须用override修饰符
+    */
+  var name = ""
+  override def toString: String = getClass.getName + "[ name = " + name + "]"
+}
+
+class Employee extends Person{
+  var salary = 0.0
+  override def toString: String = super.toString + "[salary = " + salary + "]"
 
 }
+
+
 /**
   * Scala 类和对象
   * 类是对象的抽象，而对象是类的具体实例。类是抽象的，不占用内存，而对象是具体的，占用存储空间。

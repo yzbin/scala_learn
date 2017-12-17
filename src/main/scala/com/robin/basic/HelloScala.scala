@@ -8,6 +8,7 @@ object HelloScala {
       */
     println("hello , world")
     println("hello , github")
+    println("hello,jijiabin")
   }
 }
 

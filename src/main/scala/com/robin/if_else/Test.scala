@@ -50,10 +50,27 @@ object Test {
         }
       }
     }
+
+    def test5():Unit={
+      val res0 = if(true) 1 else 2
+      println(res0)
+      val res1 = if(false) 3 else 4
+      println(res1)
+      val a = 1
+      val res2 = if (a == 1) a
+      println(res2)
+      val res3 = if (a != 1) "not one"
+      println(res3)
+      val res4 = if(a != 1) "not one" else a
+      println(res4)
+    }
+
     //tes1()
     //test2()
     //test3()
     //test4()
+    test5()
+
   }
 }
 

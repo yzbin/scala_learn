@@ -10,7 +10,26 @@ package com.robin.functional
 object CallBy {
 
   def main(args: Array[String]): Unit = {
-    delayed(time())
+//    delayed(time())
+    def test1():Unit = {
+      /**
+        * 求值策略
+        * Call By Value - 对函数实参求值，且仅求值一次
+        * Call By Name - 函数实参每次在函数体内被用到时都会求值
+        */
+      /**
+        * Scala通常使用Call By Value
+        * 如果形式参数以 => 开头, 那么会使用Call By Name
+        * def foo(x:Int) = x // call by value
+        * def foo(x: => Int) =x // call by name
+        */
+      def bar(x:Int, y: => Int):Int =1
+      def loop(): Int = loop
+      println(bar(1, loop))
+      println(bar(loop, 1))
+
+    }
+    test1()
   }
 
   def time() = {
